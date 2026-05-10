@@ -1,0 +1,37 @@
+#include<stdio.h>
+
+int main()
+{
+    int p, r, i, j, flag = 0;
+
+    printf("Enter processes and resources: ");
+    scanf("%d%d", &p, &r);
+
+    int req[p][r], avail[r];
+
+    printf("Enter Request Matrix:\n");
+    for(i=0;i<p;i++)
+        for(j=0;j<r;j++)
+            scanf("%d",&req[i][j]);
+
+    printf("Enter Available Resources:\n");
+    for(i=0;i<r;i++)
+        scanf("%d",&avail[i]);
+
+    for(i=0;i<p;i++)
+    {
+        for(j=0;j<r;j++)
+        {
+            if(req[i][j] > avail[j])
+            {
+                flag = 1;
+                break;
+            }
+        }
+    }
+
+    if(flag==1)
+        printf("Deadlock Detected");
+    else
+        printf("No Deadlock");
+}
