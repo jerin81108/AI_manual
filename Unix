@@ -1,0 +1,9 @@
+tail -10 sample.txt
+
+#!/bin/bash
+echo "Enter four integers:"
+read a b c d
+sum=$((a + b + c + d))
+avg=$(echo "scale=2; $sum / 4" | bc)
+echo "Sum = $sum"
+echo "Average = $avg"
