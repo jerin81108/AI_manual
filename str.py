@@ -1,0 +1,10 @@
+t='python is high level program'#string operation
+print(t.upper())
+print(t.lower())
+print(t.title())
+print(t.strip())
+print(t.split())
+print('_'.join(t))
+print(t.count('p'))
+print(t.replace('python','c'))
+print(t.find('high'))
