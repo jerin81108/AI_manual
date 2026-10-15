@@ -34,8 +34,9 @@ def astar(start, goal):
                 n = parent[n]
 
             path.append(start)
-
+            print("====================================")
             print("Path Found :", path[::-1])
+            print("====================================")
             return
 
         open_set.remove(n)
